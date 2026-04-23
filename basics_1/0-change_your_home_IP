@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Configure localhost and facebook.com IP mappings in /etc/hosts.
+cat > /etc/hosts <<'EOF'
+127.0.0.2 localhost
+127.0.0.1 localhost
+8.8.8.8 facebook.com
+EOF
