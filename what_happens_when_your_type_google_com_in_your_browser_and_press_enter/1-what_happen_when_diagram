@@ -1,14 +1,1 @@
-```mermaid
-flowchart LR
-    A[User Browser<br/>types https://www.google.com] --> B[DNS Resolver]
-    B --> C[DNS Resolution<br/>Returns Server IP]
-    C --> D[TCP Connection<br/>Server IP:443]
-    D -->|HTTPS / TLS Encrypted Traffic| E[Firewall]
-    E --> F[Load Balancer]
-    F --> G[Web Server]
-    G -->|Dynamic Request| H[Application Server]
-    H -->|Query Data| I[(Database)]
-    I -->|Data Response| H
-    H -->|Generate Web Page| G
-    G -->|HTTPS Response| A
-```
+https://mermaid.ink/img/Zmxvd2NoYXJ0IExSCkFbVXNlciBCcm93c2VyXG50eXBlcyBodHRwczovL3d3dy5nb29nbGUuY29tXSAtLT4gQltETlMgUmVzb2x2ZXJdCkIgLS0-IENbRE5TIFJlc29sdXRpb25cblJldHVybnMgU2VydmVyIElQXQpDIC0tPiBEW1RDUCBDb25uZWN0aW9uXG5TZXJ2ZXIgSVA6NDQzXQpEIC0tPnxIVFRQUyAvIFRMUyBFbmNyeXB0ZWQgVHJhZmZpY3wgRVtGaXJld2FsbF0KRSAtLT4gRltMb2FkIEJhbGFuY2VyXQpGIC0tPiBHW1dlYiBTZXJ2ZXJdCkcgLS0-fER5bmFtaWMgUmVxdWVzdHwgSFtBcHBsaWNhdGlvbiBTZXJ2ZXJdCkggLS0-fFF1ZXJ5IERhdGF8IElbKERhdGFiYXNlKV0KSSAtLT58RGF0YSBSZXNwb25zZXwgSApIIC0tPnxHZW5lcmF0ZSBXZWIgUGFnZXwgRwpHIC0tPnxIVFRQUyBSZXNwb25zZXwgQQ==
