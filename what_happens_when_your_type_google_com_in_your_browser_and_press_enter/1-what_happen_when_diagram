@@ -1,41 +1,14 @@
-USER BROWSER
-  |
-  | types: https://www.google.com
-  v
-DNS RESOLVER
-  |
-  | DNS resolution -> returns server IP address
-  v
-CLIENT CONNECTS TO SERVER IP:443 (TCP)
-  |
-  | HTTPS / TLS encrypted traffic
-  v
-FIREWALL
-  |
-  | allows secure traffic based on rules
-  v
-LOAD BALANCER
-  |
-  | distributes request to healthy backend
-  v
-WEB SERVER
-  |
-  | serves static content and forwards dynamic request
-  v
-APPLICATION SERVER
-  |
-  | requests data
-  v
-DATABASE
-  |
-  | returns data
-  v
-APPLICATION SERVER
-  |
-  | generates web page (HTML response)
-  v
-WEB SERVER
-  |
-  | sends response back over HTTPS
-  v
-USER BROWSER (renders page)
+```mermaid
+flowchart LR
+    A[User Browser<br/>types https://www.google.com] --> B[DNS Resolver]
+    B --> C[DNS Resolution<br/>Returns Server IP]
+    C --> D[TCP Connection<br/>Server IP:443]
+    D -->|HTTPS / TLS Encrypted Traffic| E[Firewall]
+    E --> F[Load Balancer]
+    F --> G[Web Server]
+    G -->|Dynamic Request| H[Application Server]
+    H -->|Query Data| I[(Database)]
+    I -->|Data Response| H
+    H -->|Generate Web Page| G
+    G -->|HTTPS Response| A
+```
